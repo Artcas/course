@@ -9,9 +9,61 @@ use function Clue\StreamFilter\fun;
 
 class MessageScrapperService implements MessageScrapperInterface
 {
-    public function sendWelcome()
+    public function sendOtp($customer)
     {
-        
+        $data = [
+            'subject'             => __('emails.otp_subject'),
+            'email_content'       => __('emails.otp_content'),
+            'email_content_plain' => __('emails.otp_content'),
+            'sms_content'         => __('texts.otp'),
+        ];
+
+        $data = $this->prepareEmailBody($data, 'email_content');
+
+        $toBeScrapped = [
+            '{customerFirstName}' => $customer->first_name,
+            '{customerOtpCode}'   => $customer->otp_code,
+        ];
+
+        $data['email_content'] = $this->scrapContent($data['email_content'], $toBeScrapped);
+        $data['email_content_plain'] = $this->scrapContent($data['email_content_plain'], $toBeScrapped, true);
+        $data['sms_content'] = $this->scrapContent($data['sms_content'], $toBeScrapped);
+
+        return $data;
+    }
+
+    public function sendForgotPassword($customer)
+    {
+        $data = [
+            'subject'             => __('emails.forgot_subject'),
+            'email_content'       => __('emails.forgot_content'),
+            'email_content_plain' => __('emails.forgot_content'),
+        ];
+
+        $data = $this->prepareEmailBody($data, 'email_content');
+
+        $customerResetLink = str_replace('manage.', '', URL::to('/forgot-password/' . $customer->email_token));
+
+        $data['email_content'] = $this->scrapContent($data['email_content'], [
+            '{customerFirstName}' => $customer->first_name,
+            '{customerResetLink}' => '<a href="' . $customerResetLink . '" style="overflow-wrap: anywhere; word-break: break-all;">' . $customerResetLink . '</a>',
+        ]);
+
+        $data['email_content_plain'] = $this->scrapContent($data['email_content_plain'], [
+            '{customerFirstName}' => $customer->first_name,
+            '{customerResetLink}' => $customerResetLink,
+        ], true);
+
+        return $data;
+    }
+
+    public function sendRegistrationConfirmation()
+    {
+        return $this->prepareEmailBody([
+            'subject'             => __('emails.registration_confirmation_subject'),
+            'email_content'       => __('emails.registration_confirmation_content'),
+            'email_content_plain' => __('emails.registration_confirmation_content'),
+        ], 'email_content');
     }
     //
 

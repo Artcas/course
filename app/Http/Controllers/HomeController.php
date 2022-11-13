@@ -21,4 +21,14 @@ class HomeController extends Controller
     {
         return view('cms.pages.signIn');
     }
+
+    public function confirmOtp()
+    {
+        return view('cms.pages.confirmOtp');
+    }
+
+    public function dashboard()
+    {
+        return view('cms.pages.dashboard');
+    }
 }

@@ -31,6 +31,13 @@ Route::domain(env('CMS_URL'))->group(function() {
     Route::post('sign-in', [\App\Http\Controllers\Auth\AuthController::class, 'signIn'])->name('postSignIn');
     //
     Route::get('forgot-password', [\App\Http\Controllers\HomeController::class, 'forgotPassword'])->name('forgotPassword');
+    Route::get('account/confirmation', [\App\Http\Controllers\HomeController::class, 'confirmOtp'])->name('confirmOtp');
+    Route::post('account/confirmation', [\App\Http\Controllers\Auth\AuthController::class, 'confirmOtp'])->name('postConfirmOtp');
+    Route::middleware('otp_verified')->group(function() {
+        Route::get('dashboard', [\App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
+    });
+
+
 });
 
 

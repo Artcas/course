@@ -24,6 +24,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->registerMessageScrapperService();
+    }
+
+    protected function registerMessageScrapperService()
+    {
+        $this->app->bind('App\Services\Contracts\MessageScrapperInterface', function () {
+            return new \App\Services\MessageScrapper\MessageScrapperService();
+        });
     }
 }

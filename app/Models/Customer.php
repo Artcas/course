@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use \Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Hash;
 
 class Customer extends Authenticatable
 {
@@ -16,7 +17,8 @@ class Customer extends Authenticatable
         'is_active',
         'first_name',
         'last_name',
-        'email'
+        'email',
+        'is_verified'
     ];
 
     protected $hidden = [
@@ -33,5 +35,11 @@ class Customer extends Authenticatable
     public function invoices()
     {
         return $this->hasMany(Invoice::class);
+    }
+
+    public function setPasswordAttribute($pass)
+    {
+        if ($pass)
+            $this->attributes['password'] = Hash::make($pass);
     }
 }

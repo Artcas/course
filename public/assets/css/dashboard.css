@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Dinn Arab';
+    src: url('../fonts/DINNextLTArabic-Regular-3.ttf');
+}
+
+* {
+    font-family: DINNextLTArabic, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.sidebar {
+    padding-top: 50px;
+    padding-right: 10px;
+}
+
+.sidebar .logo {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}

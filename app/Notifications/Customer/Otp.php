@@ -7,8 +7,6 @@ use \App\Mail\BareMail;
 //
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
-use NotificationChannels\Twilio\TwilioChannel;
-use NotificationChannels\Twilio\TwilioSmsMessage;
 
 class Otp extends Notification
 {
@@ -34,9 +32,6 @@ class Otp extends Notification
      */
     public function via($notifable)
     {
-        if ($notifable->otp_method === 'sms')
-            return [TwilioChannel::class];
-
         return ['mail'];
     }
 
@@ -54,16 +49,5 @@ class Otp extends Notification
             ->subject($this->data['subject'])
             ->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'))
             ->view('emails.message', $this->data);
-    }
-
-    /**
-     * Get the twilio representation of the notification.
-     *
-     * @return \NotificationChannels\Twilio\TwilioSmsMessage
-     */
-    public function toTwilio()
-    {
-        return (new TwilioSmsMessage())
-            ->content($this->data['sms_content']);
     }
 }
