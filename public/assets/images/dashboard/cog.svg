@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 40 40">
+            <image width="40" height="40" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABHNCSVQICAgIfAhkiAAAAyRJREFUWEfNWTFuVEEMZamAklBQbmiouACUKCXhAGglDkAFlJSUQEWfXIGkTkkqLkADW1ASSqAC/KJY8r7/PJ7//0YikpXsjsfz7LHfeCaL1Wp1ZQs/j8zGgcnNYOud/f1yru3FFgB+NxA7CZAz+/7WHJBzASJyRwWAfRs/ngpyLsA/tvCiWPyvjV+9LIDXzPBrk6cmhybvTdYXi72x3y/Cwg4Ec34S8LchH6PNz/b9k2Bz4Ecrgh9N+77wHEB+iLzbDQuprce8LNrRgY0lM4AZuGynuBgQpW/CidZOS5AK4NKsfB2ZM9dN/zfNgZ0vjaipJeIunI8rgBw9bM0dk3sm4LpIKT62ThxSkcQccCTymR0YRLEHoKIJLMwRq4KOOfiJ8zhXT238QTSkAHJ1pglcIeoYnwSQc3AWjxUgmUe7chBb8YsMDyaG8chryE+nIXDcwyIVoLuxo+xQRjPsmapS2OJ0YPteEKpp4EDIc7snB7GoIthWk8BAs6aBI9is4uzgH1SWrd7TJDBIVWzKyY2oewRb0eDtVTkKo49N0LVgfM/kA0UeOjcoJ9W57Y6dRx0As2hkJJw1CRyxqmlw/RbIfQDk6LUSG0b5pGn1e0vTj8dmlotZ1M8AsLdi3eMx+pwOFacO9BXAFucB5BiA0C+5LuSGBDh2i1m/5VB5lAVwilNP/4ci4TyNxbbrNNPqnhU18FEYC8sTXl2meihrQDP+BbaDuQtjqvKmELWq9m6ijpyES5K6DDHPjbkWbOWoiwDYs6nNAmxm/eTkZkFRQwYQuljoxOSuSWy3Du3zK5Os8+7iSNXNcH7Nfr7g3AifS8qaeidprDlqqLxeKICVV+ry04MK826brINySeQ9Dat3Nc/M8HMTb179CGOejGA9P+MLRbx2frrIW5/TdatbmvaYi3vsBSO4sXYwt+vSBMXqrsFbqrqUnpevaEd17vJlwSdlILPHo3hSjH08kuAApHofjBwHXovPbwzCW3rY5ec3B+8Flj3pDYqtAtiqzlarHudVTWqTAeYAhOGepqFqgC8VYFVQs0+huRF07xFJPM1t/d8Q/wDuehrqd1BG8QAAAABJRU5ErkJggg=="/>
+        </pattern>
+    </defs>
+    <rect id="Layer_7" data-name="Layer 7" width="32" height="32" rx="5" fill="url(#pattern)"/>
+</svg>

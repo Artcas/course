@@ -14,10 +14,87 @@ body {
 .sidebar {
     padding-top: 50px;
     padding-right: 10px;
+    height: 100vh;
+    border-left: 4px solid #4BACA0;
 }
 
 .sidebar .logo {
     width: 50%;
     margin: auto;
     text-align: center;
+}
+
+.sidebar .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    padding-right: 60px;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar-menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.sidebar-menu-item icon {
+    flex: 0 0 30%;
+}
+
+.sidebar-menu-item .text-holder {
+    flex: 0 0 70%;
+}
+
+.text-holder a {
+    padding: 5px 10px;
+    background: #5D5D5D;
+    color: white;
+    border-radius: 13px;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.active > .text-holder a {
+    background: #43B1A3;
+    padding: 5px 10px;
+    border-radius: 13px;
+    font-size: 17px;
+    color: white;
+}
+
+.sidebar-menu-item:hover > .text-holder > a {
+    background: #43B1A3;
+}
+
+.sidebar-menu-item:hover > .icon > svg {
+
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.bg-green {
+    background-image: url("../../assets/images/dashboard/bg-green-image.jpg");
+}
+
+.logout {
+    padding-right: 60px;
+}
+
+.title-holder {
+    text-align: center;
+    margin: 50px;
+}
+
+.title-holder .title {
+    width: fit-content;
+    margin: auto;
+    font-size: 36px;
+    color: #5D5D5D;
+    border-bottom: 2px solid white;
 }

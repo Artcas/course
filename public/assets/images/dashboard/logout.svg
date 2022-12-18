@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22" viewBox="0 0 24 22">
+    <defs>
+        <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 40 36">
+            <image width="40" height="36" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAkCAYAAAD7PHgWAAAABHNCSVQICAgIfAhkiAAAAfNJREFUWEfVmDEyBUEQht+KEOIAnsQdCJUQJ9gqdyAUCnEGV/DEQiIXkOAAnhAR/n/LvOrXZl/3vtmpYas62J2enm96ert6uqrreqCeRbyfQg4hq3ow8v6Fb6+QB8gO5MMxx61SKcAzzDxyz/6tSNgLyHGCjampEvDF6THP2mMorXkULZ0AuAfFkaXccfy8D08SkDH3rhbnUR1Arh1QnL8LuYJUQp82llNjkoA67mh4wQGmVQj6piCTvUjAWxjdEqvtOz0X28M6Pj6JgeRYJOCn2vVSwrHocJn3NCZ7JCCNyEfG0RwnPbDs0cuPP4bNOC8BKNOZmTdzAEqAWAzqfDsTMgcgj/AesgLZgDyrOInl3FbIHICeuHVDlgLkJlyQJQFdkKUBTUgPYMhbqfnRE5tSp6kHPIB9lmGdIf864NgDGPKap/zv6iFLf+gBtIykjtMBsgIK9oZM8qUBZ8KRtCSgCVcS0AWXCzDkTdqPFQtuuFyAut7T95tYXm1+iNjfliMGrYpaA7bC5fKgBRjyalu9OOXIvi9NNG4BdsqbBOzkcsO6rvHuoL/diUgp/4uLe1vrw9ulCq2PWG8n5Y7d+DJn8yilQzE5aNl+0y2QlNBJbnmExftuYNJucsNIekYDcowxdQPZhHhqwNACvoT+CaTXFvA3FvKuuEoYkugAAAAASUVORK5CYII="/>
+        </pattern>
+    </defs>
+    <rect id="Layer_1" data-name="Layer 1" width="24" height="22" fill="url(#pattern)"/>
+</svg>
